@@ -3,9 +3,9 @@ It's a sample website that help us to learn javascript object oriented programmi
 
 ## Specifications
 1. Layout a page with div elements to create a 3X3 grid - DONE
-2. A game should create 2 players and a board.
-3. A player should know whether it's an X or an O and be able to report that (e.g. player.mark() could return "X" or "O").
-4. Know which player's turn it is.
+2. A game should create 2 players and a board - DONE
+3. A player should know whether it's an X or an O and be able to report that (e.g. player.mark() could return "X" or "O") - DONE
+4. Know which player's turn it is - DONE
 5. A space should know its coordinates and be able to be marked by a player (e.g., space.mark(player_X)).
 6. A space should be able to report who it's marked by (e.g. space.markedby() could return "X" or "O", or it could return a player object - player1 or player2).
 7. Tell if there are three in a row marked by the same player.
