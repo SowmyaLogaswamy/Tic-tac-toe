@@ -1,0 +1,55 @@
+body {
+  background-color: #F5F5F5;
+}
+
+#container {
+  background-color: #FFF;
+  margin-top: 15px;
+  padding: 45px;
+  border: .4px solid #555;
+  border-radius: 5px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+#footer {
+  margin-top: 2px;
+  margin-bottom: 50px;
+  font-size: 10px;
+}
+
+#footer p {
+  float: right;
+  margin-right: 50px;
+  opacity: .7;
+}
+
+/* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
