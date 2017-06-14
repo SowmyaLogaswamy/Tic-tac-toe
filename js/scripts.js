@@ -55,8 +55,31 @@ function highlightWin(stripe) {
   });
 }
 
+// Update the full HTML content based on boardArray
+function boardRefresh() {
+  for (var index = 0;index <= boardArray.length;index++) {      //update each position
+    if(boardArray[index]===0) {
+      $("#pos"+(index)).text("");
+    }
+    else {
+      $("#pos"+(index)).text(boardArray[index]);
+    }
+  }
+}
+
 
 $(document).ready(function() {
+  //Resets the game board
+  $("#resetButton").click(function() {
+    //Clear the text fron all the 9 boxes
+    boardArray=[0,0,0,0,0,0,0,0,0];
+    console.log(boardArray);
+    //Trigger the screen refresh
+    boardRefresh();
+    //Remove the winner class from all the 9 boxes
+    $(".winner").removeClass("winner");
+    //Remember to reset whose turn it is
+  });
 
 // an event listener that fires on any click on the board
 $(".position").on("click",function() {
@@ -73,16 +96,13 @@ $(".position").on("click",function() {
       boardArray[posClicked] = "O";
     }
 
-// code here to see if someone won
+    // code here to see if someone won
     var status = boardStatus();
 
     //if there is a winner do this
     if (status.winner != "none"){
       //highlights the winning row
       highlightWin(status.winningStripe);
-
-      //stop all future clicks
-
 
     }
     else {
@@ -93,11 +113,7 @@ $(".position").on("click",function() {
     // increment the whoseTurn var (at end of the turn)
     xTurn = !xTurn;
 
-    /////////////////////////////
-    // Auto update the full HTML content  based on boardArray
-    for (var index = 0;index <= boardArray.length;index++) {      //update each position
-      $("#pos"+(index+1)).text(boardArray[index]);
-    }
+    boardRefresh();
 
     // This section is when there is an error state, they've clicked on a full position
   } else {
@@ -108,6 +124,6 @@ $(".position").on("click",function() {
 
   //console.log($(this).data("pos")+" was clicked");
   console.log(boardArray, " turn is:", xTurn);
-})
+});
 
 });

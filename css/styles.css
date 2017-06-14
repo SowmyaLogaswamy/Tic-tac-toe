@@ -1,5 +1,6 @@
 body {
   background-color: #F5F5F5;
+  font-family: 'Kadwa';
 }
 
 #container {
@@ -30,7 +31,6 @@ body {
 /* DivTable.com */
 .divTable{
 	display: table;
-	width: 100%;
 }
 .divTableRow {
 	display: table-row;
@@ -56,4 +56,21 @@ body {
 }
 .divTableBody {
 	display: table-row-group;
+  position: relative;
+}
+
+.position {
+  font-size: 100px;
+  width: 120px;
+  height: 100px;
+  display: inline-block;
+  overflow:hidden;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;       /* the same as your div height */
+}
+
+.button-space {
+  padding: 20px;
+  padding-left: 240px;
 }
