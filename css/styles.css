@@ -23,6 +23,10 @@ body {
   opacity: .7;
 }
 
+.winner {
+  background-color: salmon;
+}
+
 /* DivTable.com */
 .divTable{
 	display: table;
